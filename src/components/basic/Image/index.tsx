@@ -47,7 +47,7 @@ interface ImageProps {
   alt?: string
   style?: React.CSSProperties
   loader?: (src: string) => Promise<ArrayBuffer>
-  className: string
+  className?: string
 }
 
 export const Image = ({
