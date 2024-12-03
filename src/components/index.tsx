@@ -108,6 +108,7 @@ export { Hyperlink } from './basic/Hyperlink'
 export { SelectInput } from './basic/MultiSelectList/Components/SelectInput'
 export { SelectOptions } from './basic/MultiSelectList/Components/SelectOptions'
 export { AppMarketplaceCard } from './basic/AppMarketplaceCard-CFX'
+export { ServiceMarketplaceCard } from './basic/ServiceMarketplaceCard-CFX'
 
 export type { TableProps } from './basic/Table'
 export type {
