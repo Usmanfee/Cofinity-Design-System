@@ -47,9 +47,16 @@ interface ImageProps {
   alt?: string
   style?: React.CSSProperties
   loader?: (src: string) => Promise<ArrayBuffer>
+  className: string
 }
 
-export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
+export const Image = ({
+  src,
+  alt,
+  style,
+  loader,
+  className,
+}: ImageProps): JSX.Element => {
   const [data, setData] = useState(LogoGrayData)
   const [error, setError] = useState(false)
 
@@ -74,7 +81,7 @@ export const Image = ({ src, alt, style, loader }: ImageProps): JSX.Element => {
 
   return (
     <img
-      className="cx-image"
+      className={className}
       src={(loader ?? error) ? data : src}
       alt={alt ?? 'Catena-X'}
       onError={() => {
