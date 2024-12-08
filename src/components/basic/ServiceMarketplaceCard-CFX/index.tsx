@@ -13,6 +13,7 @@ interface ServiceCardProps<T> {
   useCase: T[]
   thumbnailURL?: string
   fetchImageWithToken: (url: string) => Promise<ArrayBuffer>
+  className?: string
 }
 
 export const ServiceMarketplaceCard = ({
@@ -21,9 +22,10 @@ export const ServiceMarketplaceCard = ({
   fetchImageWithToken,
   appName,
   useCase,
+  className,
 }: ServiceCardProps<ServiceplaceProps>) => {
   return (
-    <Card className="service-card">
+    <Card className={`service-card ${className ?? ''}`}>
       <CardContent className="service-card__content">
         <div className="service-card__logo-container">
           {thumbnailURL && (
